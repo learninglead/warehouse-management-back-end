@@ -1,11 +1,5 @@
-const Pool = require('pg').Pool;
-const { 
-  DB_USER,
-  DB_HOST,
-  DB_NAME,
-  DB_PASS,
-  DB_PORT
-} = require('../constants');
+const Pool = require("pg").Pool;
+const { DB_USER, DB_HOST, DB_NAME, DB_PASS, DB_PORT } = require("../constants");
 
 const pool = new Pool({
   user: DB_USER,
@@ -16,5 +10,5 @@ const pool = new Pool({
 });
 
 module.exports = {
-    query: (text, params) => pool.query(text, params),
+  query: (text, params) => pool.query(text, params),
 };
